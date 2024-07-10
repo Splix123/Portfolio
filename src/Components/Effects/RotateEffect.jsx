@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { animated, useSpring } from "@react-spring/web";
 
-const RotateEffect = ({ rotation = 15, timing = 150, children }) => {
+const RotateEffect = ({ rotation = 12, timing = 150, children }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const iconStyle = useSpring({
@@ -28,12 +28,12 @@ const RotateEffect = ({ rotation = 15, timing = 150, children }) => {
     };
   }, [isHovered, timing]);
 
-  const trigger = () => {
+  const handleMouseEnter = () => {
     setIsHovered(true);
   };
 
   return (
-    <animated.div onMouseEnter={trigger} style={iconStyle}>
+    <animated.div onMouseEnter={handleMouseEnter} style={iconStyle}>
       {children}
     </animated.div>
   );

@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import RotateEffect from "../Extras/RotateEffect";
+import RotateEffect from "../Effects/RotateEffect";
 
 let link;
 
@@ -43,6 +43,7 @@ const SingleLink = (whichLink) => {
       <RotateEffect>
         <FontAwesomeIcon
           icon={link.icon}
+          // TODO: Make the hoverColors work
           className={`h-14 w-14 transition-colors duration-300 hover:text-[${link.hoverColor}]`}
         />
       </RotateEffect>

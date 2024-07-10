@@ -7,7 +7,8 @@ const App = () => {
   return (
     <>
       {/* <BlobCursor /> */}
-      <div>
+      <div className="flex flex-col">
+        {/* TODO: prozente anstatt hardcoded paddings */}
         <div className="pr-40 pt-52 flex flex-col items-end gap-y-7">
           <Title />
           <Links />
